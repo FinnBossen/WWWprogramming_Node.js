@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block Inhalt %}
+
+
+<div class="container">
+    <div class="main">
+
+        <h2>LogIn Flensburger Tanzclub </h2>
+        <form method="POST">
+            <label>User Name :</label>
+            <input type="text" name="username" id="username"/>
+            <label>Password :</label>
+            <input type="text" name="password" id="password"/>
+            <input type="checkbox" name="adminChecker" id="adminChecker"/>
+            <label>Admin</label>
+            <input type="submit" value="login" id="login" formaction="/login"/>
+            <input type="submit" value="register" id="register" formaction="/register"/>
+        </form>
+
+        <span><b class="valid"> {{error}}</b></span>
+
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,2 @@
+# WWWprogramming_Node.js
+ This is the project we have done in the subject WWW programming, where we used a website that we have build previously in another subject in universty and applied Backend logic where all data is stored in a sqlite database and as an admin you can changed, add, delete data from the website. The Project was  done to learn the basics of server sided programming with node.js.

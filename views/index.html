@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../bilder/favicon.ico">
+    <link rel="icon" type="image/png" href="../bilder/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../bilder/android-icon-96x96.png" sizes="96x96">
+    <link rel="apple-touch-icon" href="../bilder/apple-icon-180x180.png" sizes="180x180">
+    <title>Startseite</title>
+</head>
+
+<body>
+<div tabindex="0" class="vertical-menu animated fadeIn">
+    <div class="responsive-menu">
+        <li class="menu-label">Menü</li>
+        <ul class="dropdown">
+            <li>
+                <a href="/index">Home</a>
+            </li>
+            <li>
+                <a href="/timePlan">Zeiten</a>
+            </li>
+            <li>
+                <a href="/gallery">Galerie</a>
+            </li>
+            <li>
+                <a href="/news">News</a>
+            </li>
+            <li>
+                <a href="/kontakt">Kontakt</a>
+            </li>
+            <li>
+                <a href="/impressum">Impressum</a>
+            </li>
+            <li>
+                <a href="/login">Login</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="responsive-logo">
+    <a href="/index">
+        <img alt="Logo" src="../bilder/FTC-Logo.svg">
+    </a>
+</div>
+<div class="header-section animated fadeIn">
+    <div class="header-banner">
+        <div class="logo-wrapper">
+            <div class="logo animated fadeIn">
+                <a href="/index">
+                    <img alt="Logo" src="../bilder/FTC-Logo-White.svg">
+                </a>
+            </div>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/index">Home</a>
+                    </li>
+                    <li>
+                        <a href="/timePlan">Zeiten</a>
+                    </li>
+                    <li>
+                        <a href="/gallery">Galerie</a>
+                    </li>
+                    <li>
+                        <a href="/news">News</a>
+                    </li>
+                    <li>
+                        <a href="/kontakt">Kontakt</a>
+                    </li>
+                    <li>
+                        <a href="/impressum">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+{% block Inhalt %}{% endblock %}
+
+
+<div class="footer_bg">
+    <div class="contacts">
+        <h3>Kontakt</h3>
+        </br>
+        <p>Flensburger Tanzclub e.V.</br>
+            Friesische Str. 150</br>
+            24937 Flensburg
+        </p>
+        </br>
+        <p>Telefon: 0461 12244</br>
+            <a href="mailto:tanzen@flensburger-tc.de">E-Mail: www.tanzen@flensburger-tc.de</a>
+        </p>
+        </br>
+        <p>
+            <a href="/impressum">Impressum</a>
+
+            <a href="/Dokumentation/Dokumentation.html">Dokumentation</a>
+        </p>
+    </div>
+    <div class="social-wrap">
+        <div class="social-wrap-inner">
+            <h3>Social Media</h3>
+            </br>
+            <ul class="social-list">
+                <li>
+                    <a target="_blank" href="https://www.facebook.com/flensburgertanzclub">
+                        <img src="../bilder/iconmonstr-facebook-4.svg">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.instagram.com/flensburgertanzclub/">
+                        <img src="../bilder/iconmonstr-instagram-14.svg">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCgsKK45jn-2zMwsiIyTf4_w">
+                        <img src="../bilder/iconmonstr-youtube-4.svg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

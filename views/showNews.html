@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block Inhalt %}
+
+<div class="grid">
+    <div class="cover animated fadeIn">
+        <video preload="auto" type="video/ogg" loop="true" autoplay="autoplay" muted="false" width="380">
+            <source src="../video/ftc.mp4">
+            <source src="../video/ftc.ogg">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+</div>
+{% for entry in entries %}
+
+<form method="POST">
+    <br></br>
+    <h2>{{entry.Titel}}</h2>
+    {% if permission =="Admin" %}
+    <br>
+    <input type="text" value="{{entry.Titel}}" name="TitelChange" id="TitelChange"/>
+    {% endif %}
+    <br></br>
+    {{entry.Text}}
+    {% if permission =="Admin" %}
+    <textarea name="changeNewsText" id="changeNewsText" class="field-long field-textarea">{{entry.Text}}</textarea>
+    <input type="submit" name="changeNews" value="change" id="changeTimePlan" formaction="/news/change/{{entry.ID}}"/>
+    <input type="submit" name="deleteNews" value="delete" id="deleteNews" formaction="/news/delete/{{entry.ID}}"/>
+    {% endif %}
+
+</form>
+{%endfor%}
+{% if permission =="Admin" %}
+<br>
+<br>
+<br>
+<form method="POST">
+    <label>Titel:</label>
+    <input type="text" name="addTitel" id="TitelCreate"/>
+    <label>News :</label>
+    <textarea name="addText" id="field5" class="field-long field-textarea"></textarea>
+    <input type="submit" value="addNews" name="addNews" id="addNews" formaction="/news/add"/>
+</form>
+{% endif %}
+
+{% endblock %}

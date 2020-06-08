@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dokumentation.css">
+
+    <title>Dokumentation</title>
+</head>
+
+<body>
+
+<div class="header">
+    <p> Finn Bossen 611325 fibo6745</p>
+    <p> Ann-Christin Frank 611358 anfr4788</p>
+</div>
+
+
+<div class="Überschrift">
+    <h1>Dokumentation </h1></br>
+    <p> Eine Hausarbeit der Hochschule Flensburg </p>
+    <p> WWW-Programmierung WiSe 2018/19</p>
+
+
+</div>
+
+
+<div class="Inhaltsverzeichnis">
+    <h2>Inhaltsverzeichnis</h2>
+    <ol>
+        <li><a href="#Thema1"> Ziel und Funktionsumfang der Anwendung</a></li>
+        <li><a href="#Thema2"> Aufbau der Anwendung</a></li>
+        <li><a href="#Thema3"> Überlegungen zu den URIs</a></li>
+        <li><a href="#Thema4"> Aufgabenteilung: Welcher Teil übernimmt welche Aufgaben?</a></li>
+        <li><a href="#Thema5"> Warum wurde diese Aufteilung gewählt?</a></li>
+        <li><a href="#Thema6"> Aufbau der Datenbank und Funktionen</a></li>
+        <li><a href="#Thema7"> Nutzung von JS im Frontend</a></li>
+        <li><a href="#Thema8"> Überlegungen zum Progressive Enhancement</a></li>
+        <li><a href="#Thema9"> Besonderheiten</a></li>
+        <li><a href="#Thema10"> Wer hat was umgesetzt?</a></li>
+        <li><a href="#Thema11"> Welche externen Komponenten, Scripte, CSS etc werden verwendet?</a></li>
+        <li><a href="#Thema12"> Warum werden sie verwendet?</a></li>
+        <li><a href="#Thema13"> Aufgetretene Probleme und deren Lösungen</a></li>
+        <li><a href="#Thema14"> Welchen vorhandenen Lösungen haben Sie als Vorlage oder Inspiration genutzt?</a></li>
+        <li><a href="#Thema15"> Ggf. eine Erklärung, dass sie über die nötigen Rechte für externe Inhalte, Bilder und
+            Komponenten verfügen, ggf. mit URIs. Keine Ausdrucke der AGBs beifügen!</a></li>
+        <li><a href="#Thema16"> Eigenständigkeitserklärung</a></li>
+
+    </ol>
+</div>
+
+<div class="Thema">
+
+    <div class="ThemaName">
+        <h3><a id="Thema1">Ziel und Funktionsumfang der Anwendung</a></h3>
+        <p>Wir möchtren ein Login für den Nutzer und dem Admin kreiren und somit unterschiedliche Rechte besitzen.
+            Ziel ist es, dass Nutzer Bilder in der Galerie hochladen können und diese dann kommentieren, löschen und
+            verändern können.
+            Der Admin soll Beiträge anpassen können (Zeileiste, Tanzkurse) Einträge löschen und verändern können.
+        </p>
+        <p>Zunächst wird die Login Seite geöffnet. Danach kann man sich asl Admin oder als normaler Nutzer registrieren.
+            Direkt nach der Registration, muss man sich einloggen, um die Nutzerbezogenen Funktionen (Admin oder Nutzer)
+            zu sehen. Man wird dann auf die Hauptseite weiter geleitet und kann sich nun durch die Website klicken.
+            Die Funktionen für den Nutzer und dem Admin sind in Aufbau der Datenbank noch mal beschrieben.</p>
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema2"></a>Aufbau der Anwendung</a></h3>
+        <p>Seite 1 - Login </p>
+        <p>registrieren und einloggen</p>
+        <p>Seite 2 - Zeitplan </p>
+        <p>Einträge hinzufügen, verändern und löschen</p>
+        <p>Seite 3 - Galerie </p>
+        <p>kommentieren, verändern und löschen</p>
+        <p>Seite 4 - Neuigkeiten </p>
+        <p>Einträge hinzufügen, verändern und löschen </p>
+
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema3"></a>Überlegungen zu den URIs</a></h3>
+        <p>Wir haben die Seiten so genannt, dass der Inhalt der Seite aus der URI zu erkennen ist.</p>
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema4"></a>Aufgabenteilung: Welcher Teil übernimmt welche Aufgaben?</a></h3>
+
+        <p>Die Website wurde zuvor in einem anderen Studienprojekt erstellt und wird in diesem Kurs nun erweitert.</p>
+        <p>Fomcontroller - formulare </p>
+        <p>Controller - die Anzeige mit Nunjucks</p>
+        <p>Nunjucks - html verändern </p>
+
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema5"></a>Warum wurde diese Aufteilung gewählt?</a></h3>
+        <p>Weil es ein übersichtliche aufgabenteilung ist und diese schon in einem Labor verwendet wurde. </p>
+
+    </div>
+
+
+    <div class="ThemaName">
+        <h3><a id="Thema6"></a>Aufbau der Datenbank und Funktionen</a></h3>
+        <p>Wir haben in der Datenbank mehrere Tabellen angelegt. </p>
+        <li><a href="/TimePlan">Zeitplan</a>
+            <p>Admin: Der Admin kann Einträge hinzufügen, bearbeiten und löschen</p>
+
+            <p>Nutzer: Der Nutzer kann den Zeitplan lediglich einsehen.</p>
+            <p>Die Einträge werden nach Tage geordnet. Bei der letzten Leiste werden alle veränderbaren Attribute
+                angezeigt, die dann vom Admin verändert oder gelöscht werden können.</p>
+        </li>
+
+        <li><a href="/login">Login</a></li>
+        <p>Man kann sich als Nutzer oder als Admin anmelden. Dies wird in der Datenbank gespeichert. Bei der
+            Registrierung wird man sofort angemeldet. Außerdem wird man beim Login auf die Hauptseite weiter
+            geleitet.</p>
+        <p>Es wird eine Fehlermeldung angezeigt, wenn das Passwort oder der Namefalsch ist. </p>
+        <li><a href="/gallery">Galerie</a></li>
+        <p>Admin: Der Admin kann Beiträge verfassen aber auch alle anderen löschen.</p>
+        <p>Nutzer: Der Nutzer kann Beiträge hinzufügen aber nur seinen eigenen ändern oder löschen.</p>
+        <p>Das Bild kann gewechselt werden, ohne es zu löschen.</p>
+        <li><a href="/news">News</a></li>
+        <p>Admin: Der Admin kann neue Beiträge verfassen und alte Beiträge löschen.</p>
+        <p>Nutzer: Der Nutzer kann die Beiträge ansehen.</p>
+
+
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema7"></a>Nutzung von JS im Frontend</a></h3>
+        <p> Wir benutzen es um die Einträge zu bearbeiten. Der Nutzer kann kommentieren und Bilder hochladen und seinen
+            Beitrag verändern oder löschen. Außerdem wird es im Kontaktformular verwendet.
+            Der Administrator besitzt die gleichen Rechte, nur das dieser Webseiten interne Beiträge (Texte,
+            Neuigkeiten, Zeitplan) und Beiträge von Nutzern bearbeiten und löschen kann.</p>
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema8"></a>Überlegungen zum Progressive Enhancement</a></h3>
+        <p>Progressive Verbesserung beruht auf folgenden Prinzipien:
+            Der Hauptinhalt sollte allen Browser verfügbar gemacht werden.
+            semantische HTML-Auszeichnung
+            Layout durch externe Stylesheets
+            zusätzliche Interaktivität durch unobtrusive JavaScript
+            Browserwahl und -Einstellungen der Nutzer werden respektiert
+            Beispielsweise sollte ein Formular so erstellt werden, dass es sich auch ohne JavaScript absenden lässt und
+            ohne CSS einen Sinn ergibt, auch wenn nicht alle von JavaScript-abhängigen Ausfüll-Hilfen funktionieren und
+            es nicht „schick“ aussieht. </p>
+        <p>Eine Lösung ist ein semantisches und responsives html. Damit lässt sich je nach Größe des Fensters eine
+            passende Einstellung zum angucken der Seite finden.
+            Außerdem benutzen wir externe css Dateien, um das html Dokument übersichtlicher zu halten. EIne weitere
+            Lösung wäre, dass die Kontaktformulare so programmiert sind, dass diese auch abgeschickt werden, wenn
+            javascript nicht funktioniert.</p>
+
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema9"></a>Besonderheiten</a></h3>
+        <p>Animate.css</p>
+        <p>Videos als Buttons</p>
+        <p>Bilder upload </p>
+        <p>TimePlan</p>
+    </div>
+
+
+    <div class="ThemaName">
+        <h3><a id="Thema10"></a>Wer hat was umgesetzt?</a></h3>
+        <p>Im Allgemeinen saßen wir an allen Punkten gemeinsam. Es gab dann Aufteilungen in der Umsetzung, die wir aber
+            auch gemeinsam besprochen haben.</p>
+
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema11">Welche externen Komponenten, Scripte, CSS etc werden verwendet?</a></h3>
+        <p>Wir benutzen Animate.css. Außerdem wurde die Website zuvor in einem anderen Studien Porjekt von Emanuel
+            Maslama, Kristin Sönnichsen und Ann-Christin Frank erstellt. Hierfür benutzen wir die Daten und Bilder des
+            Flensburger Tanzclubs mit Genehmigung. Die Html und Css Datein wurden eigenständig programmiert. Externe
+            Quellen und Inspirationen wurden im Code dokumentiert.</p>
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema12"></a>Warum werden sie verwendet?</a></h3>
+        <p>Animate.css wurde verwendet um die Seite attraktiver zu gestalten und das Ganze etwas lebendiger zu machen.
+            Die Website wurde weiter entwickelt, da sie eine gute Grundlage für diese Hausarbeit bietet.</p>
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema13"></a>Aufgetretene Probleme und deren Lösungen</a></h3>
+        <p> Das html wurde sehr oft doppelt rein kopiert wurde diese haben wir mit nunjucks gelöst. </p>
+        <p> Ein Modul wollte nicht funktionieren.</p>
+    </div>
+
+    <div class="ThemaName">
+        <h3><a id="Thema14"></a>Welchen vorhandenen Lösungen haben Sie als Vorlage oder Inspiration genutzt?</a></h3>
+        <p>Die vorhandene Website - um eine bessere Benutzung und eine Weiterentwicklung zu ermöglichen.</p>
+        <p> Für das Modul haben wir dann bcrypt js benutzt.</p>
+
+        <div class="ThemaName">
+            <h3><a id="Thema15"></a> Datennutzung</a></h3>
+            <p>Erklärung, dass wir über die nötigen Rechte für externe Inhalte, Bilder und Komponenten verfügen!</p>
+            <a href="../bilder/Datennutzung-Projekt-Webseite.pdf" title="Hier klicken um PDF-Dokument zu Lesen.">PDF
+                Dokument lesen.</a>
+
+        </div>
+
+        <div class="ThemaName">
+            <h3><a id="Thema16"></a> Eigenständigkeitserklärung</a></h3>
+            <a href="../bilder/eigenständigkeitserklärung%20www.pdf" title="Hier klicken um PDF-Dokument zu Lesen.">PDF
+                Dokument lesen.</a>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</div>
+
+<div class="footer_bg">
+    <div class="contacts">
+        <h3>Kontakt</h3>
+        </br>
+        <p>Hochschule Flensburg</p>
+        Flensburg University of Applied Sciences</br>
+        Kanzleistraße 91-93</br>
+        24943 Flensburg</br>
+        Germany</br>
+
+        <br> </br>
+
+
+        </br>
+        <p>Telefon: +49 (0)461 805-01
+            Telefax: +49 (0)461 805-1300</br>
+
+        </p>
+
+
+    </div>
+
+
+</div>
+</div>
+</body>
+
+</html>

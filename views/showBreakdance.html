@@ -1,0 +1,40 @@
+{% extends 'Index.html' %}
+
+{% block Inhalt %}
+
+<div class="grid_dance">
+    <div class="cover animated fadeIn">
+        <video preload="auto" type="video/ogg" loop="true" autoplay="autoplay" muted="false" width="380">
+            <source src="../video/breakdance.mp4">
+            <source src="../video/breakdance.ogg">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+
+    <div class="LeftSite_dance">
+        <div class="LeftSite_text_street animated fadeInLeftBig">
+            <p>
+            <h1>Breakdance & HipHop</h1>
+            </p>
+            <img alt="Logo" src="../bilder/breakdance.jpg">
+        </div>
+    </div>
+    <div class="RightSite_dance">
+        <div class="RightSite_text_break animated fadeInRightBig">
+            <p>
+                Diese Tanzform entstand um 1970 an der nordamerikanischen Ostküste und wurde ursprünglich auf der Straße
+                getanzt.Für viele
+                Jugendliche bildete das "B-Boying" eine Alternative zu der Gewalt der städtischen Straßen-Gangs.
+                Breakdance
+                ist eine Mischung aus verschiedenen Hip-Hop-Styles mit akrobatischen Elementen. Das wöchentliche
+                Training
+                findet montags im Clubsaal statt. Interessenten kommen am Besten einfach zu einer kostenlosen
+                Probestunde
+                vorbei.
+            </p>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

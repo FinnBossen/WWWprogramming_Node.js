@@ -1,0 +1,45 @@
+﻿{% extends 'index.html' %}
+
+{% block Inhalt %}
+
+<form>
+    <div class="grid">
+        <div class="cover animated fadeIn">
+            <video preload="auto" type="video/ogg" loop="true" autoplay="autoplay" muted="false" width="380">
+                <source src="../video/ftc.mp4">
+                <source src="../video/ftc.ogg">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </div>
+    <div class="wrapper">
+        <form>
+            <ul class="form-style-1">
+                <li>
+                    <label>Name
+                        <span class="required">*</span>
+                    </label>
+                    <input type="text" name="Vorname" class="field-divided" placeholder="Vorname"/> &nbsp;
+                    <input type="text" name="Nachname" class="field-divided" placeholder="Nachname"/>
+                </li>
+                <li>
+                    <label>E-Mail
+                        <span class="required">*</span>
+                    </label>
+                    <input type="email" name="Email" class="field-long" placeholder="deine@mailadresse.de"/>
+                </li>
+                <li>
+
+                </li>
+                <li>
+
+                    <textarea name="Text" id="field5" class="field-long field-textarea"></textarea>
+                </li>
+                <li>
+                    <input type="submit" formaction="/Kunde"/>
+                </li>
+            </ul>
+        </form>
+    </div>
+</form>
+{%endblock%}

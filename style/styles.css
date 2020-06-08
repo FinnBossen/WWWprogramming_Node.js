@@ -1,0 +1,1367 @@
+﻿/* Hausarbeit Gestaltung Online Medien
+   Sommersemester 2018 - Flensburger Tanzklub e.V.
+
+   Emanuel Maslama
+   Kristin Sönnichsen
+   Ann-Christin Frank
+
+   erweitert - Hausarbeit WWW-Programmierung
+   Finn Bossen
+   Ann-Christin Frank
+
+
+/* Global gültig für alle Seiten */
+@font-face {
+    font-family: "Fira Sans";
+    src: url('../src/fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype'),
+    url('../src/fonts/Fira_Sans/firasans-regular-webfont.woff2') format('woff2'),
+    url('../src/fonts/Fira_Sans/firasans-regular-webfont.woff') format('woff');
+}
+
+/* Entfernt alle Margins und Paddings,
+ * die Browser von sich aus erzeugen
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 110%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(14, 88, 159);
+}
+
+a:hover {
+    color: rgb(14, 88, 255);
+    text-decoration: none;
+}
+
+/* Global gültig für alle Seiten
+ * HEADER
+ */
+
+.responsive-logo {
+    display: none;
+}
+
+.vertical-menu {
+    display: none;
+}
+
+.header-section {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+}
+
+.header-banner {
+    background-color: rgb(14, 88, 159);
+    margin-top: 30px;
+    height: 100px;
+}
+
+.logo-wrapper {
+    float: left;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    padding-left: 60px;
+    padding-top: 7px;
+}
+
+.menu {
+    float: right;
+    width: 82%
+}
+
+nav > ul {
+    list-style: none;
+    text-align: right;
+    margin-right: 30px;
+    padding: 20px 0 20px 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    padding: 10px 25px 0 25px;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+nav > ul > li > a:hover {
+    text-decoration: none;
+    color: #ffff00;
+}
+
+/* Global gültig für alle Seiten
+ * FOOTER
+ */
+
+.footer_bg {
+    background-color: rgba(14, 88, 159, 0.4);
+    color: white;
+    height: 250px;
+    z-index: 5;
+}
+
+.contacts {
+    float: left;
+    text-align: left;
+    font-size: 80%;
+    padding-top: 30px;
+    padding-left: 70px;
+}
+
+.contacts a {
+    color: white;
+}
+
+.contacts a:hover {
+    color: #ffff00;
+}
+
+.social-wrap {
+    float: right;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 45px;
+}
+
+.social-wrap ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-wrap-inner {
+    font-size: 80%;
+    color: white;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.social-wrap ul li {
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.social-wrap ul li img {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 0;
+    width: 150%;
+    height: 150%;
+    opacity: 0.3;
+}
+
+.social-wrap ul li img:hover {
+    opacity: 0.7;
+}
+
+/*LogIn*/
+
+h2 {
+    padding-top: 40px;
+    color: rgba(14, 88, 159, 1);
+    padding: 30px 35px;
+    padding-bottom: 10pt;
+    margin: -10px -50px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+hr {
+
+    margin: 10px -50px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+
+div.container {
+    padding-top: 60pt;
+    width: 900px;
+    height: 610px;
+    margin: 35px auto;
+    color: rgba(14, 88, 159, 1);
+}
+
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
+    margin: 0px;
+    height: 154px;
+    width: 569px;
+
+}
+
+div.main {
+
+    width: 300px;
+    padding: 10px 50px 25px;
+    /*border: 2px solid gray;
+
+    border-color: rgba(14,88,159, 1);
+    border-radius: 10px;*/
+    font-family: raleway;
+    float: left;
+    margin-top: 50px;
+}
+
+input[type=text], input[type=password] {
+
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-color: rgba(14, 88, 159, 1);
+    color: rgba(14, 88, 159, 1);
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+label {
+
+    color: rgba(14, 88, 159, 1);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+center {
+    font-size: 32px;
+}
+
+.valid {
+    color: rgba(14, 88, 159, 1);
+}
+
+.back {
+    text-decoration: none;
+    border: 1px solid rgb(0, 143, 255);
+    padding: 3px 20px;
+    border-radius: 2px;
+    color: black;
+}
+
+input[type=button] {
+    font-size: 16px;
+    background: rgba(14, 88, 159, 1);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0;
+    outline: none;
+}
+
+input[type=submit]:hover {
+    background: rgba(14, 88, 159, 0.5);
+}
+
+input[type=submit] {
+    font-size: 16px;
+    background: rgba(14, 88, 159, 1);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0;
+    outline: none;
+}
+
+input[type=button]:hover {
+    background: rgba(14, 88, 159, 0.5);
+}
+
+/* Index.html */
+
+.content {
+    text-align: center;
+    font-size: 20pt;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    margin: 50px auto 100px auto;
+}
+
+.cover {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.cover video {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.welcome-text {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.LeftButton:hover {
+    -ms-transform: scale(1.15, 1.15);
+    -webkit-transform: scale(1.15, 1.15);
+}
+
+.RightButton:hover {
+    -ms-transform: scale(1.15, 1.15);
+    -webkit-transform: scale(1.15, 1.15);
+}
+
+.LeftVideo {
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.RightVideo {
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.LeftVideo video {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.RightVideo video {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.LeftSite {
+    text-align: center;
+    border: 3px solid lightgrey;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+
+}
+
+.LeftSite-text {
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-right: 20px
+
+}
+
+.LeftSite img {
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.RightSite {
+    text-align: center;
+    border: 3px solid lightgrey;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+
+}
+
+.RightSite img {
+    width: 80%;
+    height: 82%;
+    text-align: center;
+    vertical-align: middle
+
+}
+
+/*Impressum.html */
+.Impr {
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.sponsor {
+    margin-top: -20px;
+}
+
+.sponsor-image img {
+    width: 60%;
+    height: 60%;
+}
+
+.LeftSite_Impr {
+    text-align: left;
+    background-color: white;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.RightSite_Impr {
+    text-align: left;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-right: 20px;
+    margin-left: 120px;
+
+}
+
+.RightSite_text_Impr1 {
+    margin-top: 60px;
+
+}
+
+.LeftSite_text_Impr > h1 {
+    margin-bottom: 20px;
+}
+
+.LeftSite_text_Impr > h2 {
+    margin-bottom: 20px;
+}
+
+.RightSite_text_Impr > h2 {
+    margin-bottom: 20px;
+
+}
+
+/*specials.html*/
+
+.grid_specials {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    max-width: 80%;
+    margin: 50px auto 100px auto;
+
+}
+
+.LeftSite_specials {
+
+    text-align: left;
+
+    background-color: white;
+
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-right: 20px;
+
+}
+
+.RightSite_specials {
+    text-align: left;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-right: 20px;
+
+}
+
+/*  news.html    */
+
+.grid_news {
+    max-width: 80%;
+    margin: 50px auto 100px auto;
+    text-align: left;
+}
+
+.RightSite_news {
+    text-align: center;
+}
+
+/*streetdance.html
+ breakdance.html
+ videoclip.html
+ turniertanz.html
+ linedance.html
+ kindertanzen.html
+ */
+.grid_dance {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    max-width: 80%;
+    margin: 50px auto 100px auto;
+
+}
+
+.LeftSite_dance {
+    text-align: left;
+    background-color: white;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-right: 20px;
+}
+
+.RightSite_dance {
+    text-align: left;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-right: 20px;
+}
+
+.LeftSite_text_videoclip > img {
+    width: 400px;
+    height: 300px;
+    margin-top: 40px;
+}
+
+.RightSite_text_street {
+    margin-top: 40px;
+}
+
+.LeftSite_text_street > img {
+    width: 400px;
+    height: 300px;
+    margin-top: 40px;
+}
+
+.RightSite_text_break {
+    margin-top: 80px;
+}
+
+.LeftSite_text_Kinder {
+    width: 300px;
+    height: 200px;
+}
+
+.RightSite_Kinder {
+    text-align: left;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-right: 20px;
+    margin-top: 125px;
+}
+
+/*rocknroll.html*/
+
+.grid_rock {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    max-width: 80%;
+    margin: 50px auto 100px auto;
+}
+
+.LeftSite_rock {
+    text-align: left;
+    background-color: white;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-right: 20px;
+}
+
+.RightSite_rock {
+    text-align: left;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-right: 20px;
+}
+
+/* Zeiten und belegung.html */
+
+.times_mobil {
+    display: none;
+}
+
+.grid_time {
+    display: grid;
+    grid-template-columns: 15% 25% 30% 15% 15%;
+    max-width: 80%;
+    margin: 50px auto 100px auto;
+}
+
+.grid_time h1 {
+    text-align: center;
+    margin-bottom: 5%
+}
+
+.cover_time {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.cover_time > video {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.Spalte_top1 {
+    text-align: left;
+    background-color: white;
+    margin-top: 40px;
+}
+
+.Spalte_top {
+    margin-left: 40px;
+    text-align: left;
+    color: rgb(14, 88, 159);
+    background-color: white;
+    margin-top: 40px;
+}
+
+.Spalte_top3 {
+    text-align: left;
+    color: rgb(14, 88, 159);
+    background-color: white;
+    margin-top: 40px;
+}
+
+.Spalte1 {
+    text-align: left;
+    background-color: white;
+    margin-top: 40px;
+}
+
+.Spalte2 {
+    margin-left: 40px;
+    text-align: left;
+    background-color: white;
+    margin-top: 40px;
+}
+
+.Spalte3 {
+    text-align: left;
+    background-color: white;
+    margin-top: 40px;
+}
+
+.Spalte4 {
+    margin-left: 40px;
+    text-align: left;
+    background-color: white;
+    margin-top: 40px;
+}
+
+.Spalte5 {
+    margin-left: 40px;
+    text-align: left;
+    background-color: white;
+    margin-top: 40px;
+}
+
+/* Galerie
+ *
+ * Codeübernahme: https://www.youtube.com/watch?v=x-K0oOEtIgg
+ * by Marc Hinton  abgerufen: 24.06.2018
+ */
+
+.gallery-wrapper h1 {
+
+    padding-top: 200px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.slide-show {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slide p {
+    font-size: 100px;
+    text-align: center;
+    position: absolute;
+    width: 20%;
+    color: #ffffff;
+}
+
+.slide-show figure div {
+    width: 20%;
+    float: left;
+}
+
+.slide-show figure img {
+    width: 100%;
+    float: left;
+}
+
+.slide-show form {
+    text-align: center;
+    padding-right: 600px;
+    padding-left: 600px;
+    padding-bottom: 50px;
+}
+
+.slide-show form input {
+    text-align: center;
+
+}
+
+.slide-show figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 50s slidy infinite;
+}
+
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    10% {
+        left: 0%;
+    }
+
+    12% {
+        left: -100%;
+    }
+
+    22% {
+        left: -100%;
+    }
+
+    24% {
+        left: -200%;
+    }
+
+    34% {
+        left: -200%;
+    }
+
+    36% {
+        left: -300%;
+    }
+
+    46% {
+        left: -300%;
+    }
+
+    48% {
+        left: -400%;
+    }
+
+    58% {
+        left: -400%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    70% {
+        left: -300%;
+    }
+
+    72% {
+        left: -200%;
+    }
+
+    82% {
+        left: -200%;
+    }
+
+    84% {
+        left: -100%;
+    }
+
+    94% {
+        left: -100%;
+    }
+
+    96% {
+        left: 0%;
+    }
+}
+
+/*  Kontakt.html    */
+
+/*  Codeübernahme: https://www.sanwebe.com/2014/08/css-html-forms-designs
+ *  Form Style 1    by: Saran   abgerufen: 25-06-2018
+ *  leicht angepasst
+ */
+
+.wrapper {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.kontaktformular {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-style-1 {
+    margin: 0 10% 10% 10%;
+    max-width: 800px;
+    font-size: 80%;
+}
+
+.form-style-1 li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 40px 0 0 0;
+}
+
+.form-style-1 label {
+    margin: 10px 0 3px 0;
+    padding: 0px;
+    display: block;
+    font-weight: bold;
+}
+
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #BEBEBE;
+    padding: 7px;
+    margin: 0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+}
+
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus {
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+
+.form-style-1 .field-divided {
+    width: 49%;
+}
+
+.form-style-1 .field-long {
+    width: 100%;
+}
+
+.form-style-1 .field-select {
+    width: 100%;
+}
+
+.form-style-1 .field-textarea {
+    height: 100px;
+}
+
+.form-style-1 input[type=submit], .form-style-1 input[type=button] {
+    background: rgb(14, 88, 159);
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover {
+    background: rgb(14, 88, 159);
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.form-style-1 .required {
+    color: red;
+}
+
+@media only screen and (max-width: 888px) {
+
+    /*  Codeübernahme: https://koen.kivits.com/articles/pure-css-menu/
+     *  by Koen Kivits      abgerufen: 23-06-2018
+     */
+    .responsive-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 90px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .vertical-menu {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        font-size: 150%;
+    }
+
+    .vertical-menu:focus {
+        pointer-events: none;
+    }
+
+    .vertical-menu:focus .dropdown {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .responsive-menu {
+        background-color: rgb(14, 88, 159);
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 60px;
+        top: 0;
+        z-index: 1;
+    }
+
+    .menu-label {
+        padding-top: 10px;
+    }
+
+    .dropdown {
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        background-color: rgb(14, 88, 159);
+        border-bottom-color: 1px solid white;
+        width: 100%;
+        margin-top: 10px;
+        transition: visibility 0.5s;
+    }
+
+    .dropdown li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgb(14, 88, 159);;
+        border: 1px solid white;
+        border-left: none;
+        border-right: none;
+    }
+
+    .dropdown li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .dropdown li a:hover {
+        text-decoration: none;
+        color: #ffff00;
+    }
+
+    /************************************/
+    .header-section {
+        display: none;
+    }
+
+    .grid {
+        display: block;
+        grid-template-columns: 1fr;
+    }
+
+    .grid_time {
+        display: block;
+        margin-top: 100%;
+    }
+
+    .cover {
+        display: none;
+    }
+
+    .welcome-text {
+        padding-bottom: 30px;
+    }
+
+    .LeftVideo {
+        text-align: center;
+        background-color: white;
+        border-radius: 20px;
+        margin: 30px auto auto auto;
+        cursor: pointer;
+    }
+
+    .RightVideo {
+        text-align: center;
+        background-color: white;
+        border-radius: 20px;
+        margin: 20px auto auto auto;
+        cursor: pointer;
+    }
+
+    /* FOOTER
+     *
+     */
+    .footer_bg {
+        background-color: rgba(14, 88, 159, 0.4);
+        color: white;
+        height: 350px;
+    }
+
+    .contacts {
+        float: none;
+        text-align: center;
+        font-size: 80%;
+        padding-top: 20px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .social-wrap {
+        float: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        padding-top: 35px;
+    }
+
+    .social-wrap-inner {
+        font-size: 80%;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .social-wrap ul {
+        display: inline-block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .social-wrap ul li {
+        display: inline-block;
+        padding-right: 20px;
+        padding-left: 10px;
+    }
+
+    .social-wrap ul li img {
+        display: inline-block;
+        padding-right: 0px;
+        padding-left: 0;
+        width: 150%;
+        height: 150%;
+    }
+
+    .social-list {
+        display: inline-block;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    /*  Zeiten und Belegungen.html
+     *
+     */
+    .grid_time {
+        display: grid;
+        grid-template-columns: 25% 40% 15% 20%;
+        max-width: 80%;
+        margin: 50px auto 100px auto;
+    }
+
+    .grid_time h1 {
+        text-align: center;
+        margin-bottom: 5%
+    }
+
+    .Spalte1 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    .Spalte_top1 {
+        display: none;
+    }
+
+    .Spalte_top {
+        display: none;
+    }
+
+    .Spalte_top3 {
+        display: none;
+    }
+
+    .Spalte2 {
+        margin-left: 0px;
+    }
+
+    .Spalte3 {
+        text-align: left;
+        background-color: white;
+        margin-top: 40px;
+    }
+
+    .Spalte4 {
+        margin-left: 10px;
+    }
+
+    .Spalte5 {
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .responsive-logo {
+        height: 80%;
+        width: 80%;
+    }
+
+    .grid_time {
+        display: none;
+    }
+
+    .times_mobil {
+        display: block;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 20px;
+    }
+
+    .times_mobil h3 {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .LeftVideo video {
+        width: 90%;
+        height: 90%;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .RightVideo video {
+        width: 90%;
+        height: 90%;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+/*********************************************************************/
+
+/* Codeübernahme:
+ *
+ * animate.css -http://daneden.me/animate
+ * Version - 3.6.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2018 Daniel Eden
+ */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInLeftBig {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+        transform: translate3d(-2000px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeftBig {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+        transform: translate3d(-2000px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+}
+
+@-webkit-keyframes fadeInRightBig {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(2000px, 0, 0);
+        transform: translate3d(2000px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRightBig {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(2000px, 0, 0);
+        transform: translate3d(2000px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInRightBig {
+    -webkit-animation-name: fadeInRightBig;
+    animation-name: fadeInRightBig;
+}

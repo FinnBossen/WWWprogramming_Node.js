@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block Inhalt %}
+
+
+<div class="gallery-wrapper">
+    <h1>Impressionen</h1>
+    <div class="slide-show">
+        <figure>
+            {% for entry in entries %}
+
+            <div class="slide">
+                <form ref='uploadForm' encType="multipart/form-data" class=""
+                      action="/gallery/changeUpload/{{entry.ID}}" method="post">
+                    <img src={{entry.BildReference}}>
+                    <br>
+                    <h3>{{entry.Kommentar}}</h3>
+                    <br>
+                    {% if permission =="Admin" %}
+                    <input type="text" name="ChangeGalleryComment" id="ChangeGalleryComment"
+                           value="{{entry.Kommentar}}"/>
+                    <input type="file" name="foo" value=""><br>
+                    <input type="submit" name="" value="change Image">
+                    <input type="submit" name="" value="delete Image" formaction="/gallery/deleteUpload/{{entry.ID}}">
+                    {% endif %}
+                </form>
+            </div>
+
+            {%endfor%}
+
+        </figure>
+        {% if permission =="Admin" %}
+        <form ref='uploadForm' encType="multipart/form-data" class="" action="/gallery/upload" method="post">
+            <p>{{error}}</p>
+            <input type="text" name="GalleryComment" id="GalleryComment"/>
+            <input type="file" name="foo" value=""><br>
+
+            <input type="submit" name="" value="upload Image">
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+{%endblock%}
+

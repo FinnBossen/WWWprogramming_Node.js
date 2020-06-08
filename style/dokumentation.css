@@ -1,0 +1,173 @@
+/* Hausarbeit WWW-Programmierung
+
+   Finn Bossen 611325
+   Ann-Christin Frank 611358
+
+*/
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url('fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype'),
+    url('fonts/Fira_Sans/firasans-regular-webfont.woff2') format('woff2'),
+    url('fonts/Fira_Sans/firasans-regular-webfont.woff') format('woff');
+}
+
+/* Entfernt alle Margins und Paddings,
+ * die Browser von sich aus erzeugen
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 110%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 70%;
+    color: white;
+    background-color: rgb(14, 88, 159);
+    padding-left: 70px;
+}
+
+h1 {
+    margin-top: 70px;
+    font-size: 350%;
+
+}
+
+.Inhaltsverzeichnis {
+    color: rgba(41, 37, 37, 0.8);
+    text-align: left;
+    padding-left: 70px;
+}
+
+.Inhaltsverzeichnis ol {
+
+    padding-top: 30px;
+}
+
+.Überschrift {
+    font-size: 100;
+    text-align: center;
+    color: rgba(41, 37, 37, 0.8);
+}
+
+/* dokumentation*/
+
+.content {
+    text-align: center;
+    font-size: 20pt;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    margin: 50px auto 100px auto;
+}
+
+.Inhaltsverzeichnis {
+    padding-top: 30px;
+    color: rgba(41, 37, 37, 0.8);
+    text-align: left;
+
+}
+
+.Inhaltsverzeichnis ol li a {
+    text-decoration: none;
+    color: rgba(41, 37, 37, 0.8);
+}
+
+.Inhaltsverzeichnis ol li a:hover {
+
+    color: rgb(14, 88, 159);
+}
+
+.Thema {
+    padding-top: 30px;
+    color: rgba(41, 37, 37, 0.8);
+    text-align: left;
+    padding-left: 70px;
+
+}
+
+.ThemaName {
+    padding-top: 30px;
+}
+
+.ThemaName li {
+    padding-top: 30px;
+}
+
+.ThemaName li a {
+
+    text-decoration: none;
+    color: rgba(41, 37, 37, 0.8);
+}
+
+.ThemaName li a:hover {
+
+    color: rgb(14, 88, 159);
+}
+
+/*  FOOTER */
+
+.footer_bg {
+    background-color: rgb(14, 88, 159);
+    color: white;
+    height: 250px;
+    z-index: 5;
+    margin-top: 70px;
+}
+
+.contacts {
+    float: left;
+    text-align: left;
+    font-size: 80%;
+    padding-top: 30px;
+    padding-left: 70px;
+}
+
+.Ersteller {
+    font-size: 80%;
+    float: right;
+    font-size: 80%;
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 45px;
+}
+
+.Liste {
+    float: right;
+    display: block;
+    padding-top: 30px;
+    color: white;
+    margin: 0;
+
+}
+
+.ErstellerÜberschrift {
+    font-size: 80%;
+    color: white;
+    text-align: right;
+    padding: 0;
+    padding-bottom: 0px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+

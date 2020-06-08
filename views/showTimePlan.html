@@ -1,0 +1,142 @@
+{% extends 'index.html' %}
+
+{% block Inhalt %}
+<form method="POST">
+    <div class="grid_time">
+        <div class="cover_time animated fadeIn">
+            <video preload="auto" type="video/ogg" loop="true" autoplay="autoplay" muted="false" width="380">
+                <source src="../video/ftc.mp4">
+                <source src="../video/ftc.ogg">
+                Your browser does not support HTML5 video.
+            </video>
+            <h1> Zeiten und Belegungen</h1>
+        </div>
+        <div class="Spalte_top1">
+            <div class="Spalte_text animated fadeInDown">
+                <p></p>
+            </div>
+        </div>
+        <div class="Spalte_top">
+            <div class="Spalte_text animated fadeInDown">
+                <p>Wann?</p>
+            </div>
+        </div>
+        <div class="Spalte_top3">
+            <div class="Spalte_text animated fadeInDown">
+                <p>Was?</p>
+            </div>
+        </div>
+        <div class="Spalte_top">
+            <div class="Spalte_text animated fadeInDown">
+                <p>Wo?</p>
+            </div>
+        </div>
+        <div class="Spalte_top">
+            <div class="Spalte_text animated fadeInDown">
+                <p>Mit wem?</p>
+            </div>
+        </div>
+        {% for entry in entries %}
+        <div class="Spalte1">
+            <div class="Spalte_text animated fadeInDown">
+
+                <h3>{{entry.day}} </h3>
+
+
+            </div>
+        </div>
+        <div class="Spalte2">
+            <div class="Spalte_text animated fadeInDown">
+                {% for event in entry.data %}
+                <p>{{event.Anfang}} - {{event.Ende}}</p>
+
+
+                {% endfor %}
+
+            </div>
+        </div>
+        <div class="Spalte3">
+            <div class="Spalte_text animated fadeInDown">
+                <p>
+                </p>
+
+                {% for event in entry.data %}
+                <p>{{event.Kurs}}</p>
+
+                {% endfor %}
+            </div>
+        </div>
+        <div class="Spalte4">
+            <div class="Spalte_text animated fadeInDown">
+                <p>
+                </p>
+                {% for event in entry.data %}
+                <p>{{event.Ort}}</p>
+
+
+                {% endfor %}
+            </div>
+        </div>
+        <div class="Spalte5">
+            <div class="Spalte_text animated fadeInDown">
+                {% for event in entry.data %}
+                <p>{{event.Trainer}}</p>
+                {% if permission =="Admin" %}
+                <form method="POST">
+                    <input type="text" name="TrainerChange" value="{{event.Trainer}}"/>
+                    <input type="text" name="WochentagChange" value="{{entry.day}}"/>
+                    <input type="text" name="AnfangChange" value="{{event.Anfang}}"/>
+                    <input type="text" name="EndeChange" value="{{event.Anfang}}"/>
+                    <input type="text" name="KursChange" value="{{event.Kurs}}"/>
+                    <input type="text" name="OrtChange" value="{{event.Ort}}"/>
+                    <input type="submit" value="Change" name="TableChange" id="changeTable"
+                           formaction="/TimePlan/change/{{ event.ID }}"/>
+                </form>
+                <form method="POST">
+                    <input type="submit" value="DeleteEvent" id="deleteNews"
+                           formaction="/TimePlan/delete/{{ event.ID }}"/>
+                </form>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="times_mobil">
+        {% for entry in entries %}
+        <h3>{{entry.day}}</h3>
+        <div class="times-container">
+
+            {% for event in entry.data %}
+            <p>{{event.Anfang}} - {{event.Ende}}
+                Uhr&ensp;{{event.Kurs}}&ensp;{{event.Ort}}&ensp;{{event.Trainer}}&ensp;</br></p>
+            <input type="submit" value="DeleteEvent" id="deleteNewsmobil" formaction="/TimePlan/delete/{{ event.ID }}"/>
+            {% endfor %}
+
+        </div>
+
+        {% endfor %}
+    </div>
+</form>
+{% if permission =="Admin" %}
+<form method="POST">
+    <label>Wochentag :</label>
+    <input type="text" name="Wochentag" id="WochentagCreate"/>
+    <label>Anfang:</label>
+    <input type="text" name="Anfang" id="AnfangCreate"/>
+    <label>Ende:</label>
+    <input type="text" name="Ende" id="EndeCreate"/>
+    <label>Kurs:</label>
+    <input type="text" name="Kurs" id="KursCreate"/>
+    <label>Ort:</label>
+    <input type="text" name="Ort" id="OrtCreate"/>
+    <label>Trainer:</label>
+    <input type="text" name="Trainer" id="TrainerCreate"/>
+    <input type="submit" value="add" name="addTimePlan" id="addTimePlan" formaction="/timePlan/add"/>
+</form>
+{% endif %}
+
+{% endblock%}
+
+

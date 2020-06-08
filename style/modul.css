@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Fira Sans";
+    src: url('../src/fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype'),
+    url('../src/fonts/Fira_Sans/firasans-regular-webfont.woff2') format('woff2'),
+    url('../src/fonts/Fira_Sans/firasans-regular-webfont.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    margin: 50px auto 100px auto;
+}
+
+.menuetext {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    background-color: rgb(14, 88, 159);
+    color: white;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.herzlichwillkommen {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+
+}
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    background-color: rgba(14, 88, 159, 40%);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 60px;
+
+}
